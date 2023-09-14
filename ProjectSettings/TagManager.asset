@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - wall
+  - Cactus
   layers:
   - Default
   - TransparentFX

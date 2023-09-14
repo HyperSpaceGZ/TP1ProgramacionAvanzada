@@ -7,7 +7,6 @@ public class PlayerScript : MonoBehaviour
 {
     public int jumpforce;
     public bool isjumping = false;
-    public Animator Animator;
 
     void Update()
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.tag == "Floor")
         {
             isjumping = false;
+        }
+
+        if (collision.gameObject.tag == "Cactus")
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class CactusScript : MonoBehaviour
 {
     public float CactusSpeed;
+    public delegate void ScoreEvent();
+    public static ScoreEvent scoreevent;
 
     void Update()
     {
@@ -16,6 +18,14 @@ public class CactusScript : MonoBehaviour
         if (collision.gameObject.CompareTag("wall"))
         {
             gameObject.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            scoreevent?.Invoke();
         }
     }
 }
